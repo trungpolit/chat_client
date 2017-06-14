@@ -2,9 +2,11 @@
 node_modules/
 dist/
 npm-debug.log
-yarn-error.log
-.idea
-hooks
-platforms
-plugins
-res
+npm-debug.log.*
+selenium-debug.log
+test/unit/coverage
+test/e2e/reports
+cordova/platforms
+cordova/plugins
+thumbs.db
+!.gitkeep
