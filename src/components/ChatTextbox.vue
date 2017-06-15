@@ -22,6 +22,7 @@
           time: time
         }
         this.$store.commit('pushConversations', message)
+        this.$store.state.socket.emit('chat message', message)
         this.message = ''
       }
     }

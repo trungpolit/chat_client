@@ -61,10 +61,12 @@
 </template>
 
 <script>
+  /* eslint-disable no-trailing-spaces */
+
   import FakerModal from './FakerModal.vue'
   import ChatTextbox from './ChatTextbox.vue'
   import ChatYouMessage from './ChatYouMessage.vue'
-  import {mapState} from 'vuex'
+  import { mapState } from 'vuex'
 
   export default {
     data () {
@@ -84,6 +86,9 @@
     },
     updated () {
       this.$refs.chatMessages.scrollTop = this.$refs.chatMessages.scrollHeight
+    },
+    created () {
+      this.$store.dispatch('getChatServer')
     }
   }
 </script>

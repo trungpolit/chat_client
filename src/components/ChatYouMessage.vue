@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="chat-you">
+    <div :class="who">
       <div class="chat-user">
         <img :src="avatarUrl" :title="userName">
       </div>
@@ -27,6 +27,9 @@
         const d = new Date()
         const time = d.getTime()
         return time - this.time
+      },
+      who () {
+        return (this.userName === this.$store.state.userName) ? 'chat-you' : 'chat-other'
       }
     }
   }
